@@ -3,7 +3,7 @@ This is probably only of use to me, but I have need of it in multiple apps so I 
 ***
 
 # OMAC
-A simple trait to allow authorization checks using whatever authorization package is desired. Currently supports Laravel Default, Shinobi, Sentinel and Entrust.
+A simple trait to allow _basic_ authorization checks using whatever authorization package is desired. Currently supports Laravel Default, Shinobi, Sentinel and Entrust.
 
 ## Installation
 
@@ -22,7 +22,7 @@ Where you want to use OMAC to check access, add the trait.
     {
         use \Smarch\Omac\OmacTrait;
 
-Once you have the trait in use, and are happy with the authorization driver you are using _(see parameters below)_, you can use the `checkAccess()` method of Omac by passing in the required permission to allow access.
+Once you have the <kbd>OmacTrait</kbd> in use, and you are happy with the authorization driver you are using _(see parameters below)_, you can use the `checkAccess()` method of Omac by passing in the required permission to allow access.
 
 #### Example of using OMAC to permit viewing an index of resources
 
@@ -47,7 +47,7 @@ Once you have the trait in use, and are happy with the authorization driver you 
     }
 
 #### Arguments
-The checkAccess() method accepts both the $permission and an $arguments variable. So if your preferred authorization package accepts a second argument to its method, you can use it.
+The `checkAccess()` method accepts both the $permission and an $arguments variable. So if your preferred authorization package accepts a second argument to its method, you can use it.
 
         if ( $this->checkAccess('update.post', $post) ) {
 
