@@ -2,7 +2,15 @@
     "name": "smarch/omac",
     "description": "An ACL trait.",
     "homepage": "https://github.com/SmarchSoftware/omac",
-    "keywords": ["acl", "authorization", "watchtower", "laravel", "sentinel", "shinobi", "entrust"],
+    "keywords": [
+        "acl",
+        "authorization",
+        "watchtower",
+        "laravel",
+        "sentinel",
+        "shinobi",
+        "entrust"
+        ],
     "require": {
         "php": ">=5.5.9"
     },
