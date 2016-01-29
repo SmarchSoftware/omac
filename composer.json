@@ -1,6 +1,6 @@
 {
     "name": "smarch/omac",
-    "description": "An ACL trait.",
+    "description": "A simple ACL trait to allow authorization checks using whatever authorization package is desired. Currently supports Laravel Default, Shinobi, Sentinel and Entrust.",
     "homepage": "https://github.com/SmarchSoftware/omac",
     "keywords": [
         "acl",
