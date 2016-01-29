@@ -22,22 +22,7 @@ Where you want to use OMAC to check access, add the trait.
     {
         use \Smarch\Omac\OmacTrait;
 
-### Parameters
-
-By default, OMAC is set to enabled and to use Laravel's built-in authorization can method. _(Gate)_ If you wish to use a different authorization method, or to disable OMAC, you can change the parameters. You can do it in your class or method somewhere for a one-off usage, or you can set it on the constructor of your class to make the change for all the methods.
-
-    /**
-     * constructor
-     * 
-     * @param boolean acl Whether or not ACL is enabled
-     * @param string $driver Which ACL package to use
-     */
-    public function __construct() {
-        $this->acl = false;
-        $this->driver = "sentinel";
-    }
-
-Once you have the trait in use, and are happy with the authorization driver you are using, you can use the `checkAccess($permission)` method of Omac.
+Once you have the trait in use, and are happy with the authorization driver you are using _(see parameters below)_, you can use the `checkAccess($permission)` method of Omac by passing in the required permission to allow access.
 
 #### Example of using OMAC to permit viewing an index of resources
 
@@ -57,8 +42,23 @@ Once you have the trait in use, and are happy with the authorization driver you 
         // OR
         return false;
         // OR
-        abort(503);
+        abort(401, 'Unauthorized action.');
 
+    }
+
+### Parameters (optional)
+
+By default, OMAC is set to _enabled_ and to use _Laravel_'s built-in authorization can method. _(Gate)_ If you wish to use a different authorization method, or to disable OMAC, you can change the parameters. You can do it in your class or method somewhere for a one-off usage, or you can set it on the constructor of your class to make the change for all the methods.
+
+    /**
+     * constructor
+     * 
+     * @param boolean acl Whether or not ACL is enabled
+     * @param string $driver Which ACL package to use
+     */
+    public function __construct() {
+        $this->acl = false;
+        $this->driver = "sentinel";
     }
 
 ## :trident: Why "OMAC"?
