@@ -1,0 +1,21 @@
+{
+    "name": "smarch/omac",
+    "description": "An ACL trait.",
+    "homepage": "https://github.com/SmarchSoftware/omac",
+    "keywords": ["acl", "authorization", "watchtower", "laravel", "sentinel", "shinobi", "entrust"],
+    "require": {
+        "php": ">=5.5.9",
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Smarch Software",
+            "email": "packages@smarchsoft.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Smarch\\Omac\\": "src/"
+        }
+    }
+}
