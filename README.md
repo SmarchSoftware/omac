@@ -7,7 +7,7 @@ A simple trait to allow authorization checks using whatever authorization packag
 
 ## Installation
 
-This page is intended for installation, please check out the wiki for more information about usage.
+Installation is performed with composer.
 
 #### :black_square_button: Composer
 
