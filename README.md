@@ -52,6 +52,7 @@ The `checkAccess()` method accepts both the $permission and an $arguments variab
         if ( $this->checkAccess('update.post', $post) ) {
 
 > :hand: NOTE : Sentinel **only** accepts a $permission argument so you will not be able to pass in a second argument.
+
 > :hand: NOTE : Entrust only accepts a boolean (true/false) as it second argument.
 
 
