@@ -22,7 +22,7 @@ Where you want to use OMAC to check access, add the trait.
     {
         use \Smarch\Omac\OmacTrait;
 
-Once you have the trait in use, and are happy with the authorization driver you are using _(see parameters below)_, you can use the `checkAccess($permission)` method of Omac by passing in the required permission to allow access.
+Once you have the trait in use, and are happy with the authorization driver you are using _(see parameters below)_, you can use the `checkAccess()` method of Omac by passing in the required permission to allow access.
 
 #### Example of using OMAC to permit viewing an index of resources
 
@@ -45,6 +45,15 @@ Once you have the trait in use, and are happy with the authorization driver you 
         abort(401, 'Unauthorized action.');
 
     }
+
+#### Arguments
+The checkAccess() method accepts both the $permission and an $arguments variable. So if your preferred authorization package accepts a second argument to its method, you can use it.
+
+        if ( $this->checkAccess('update.post', $post) ) {
+
+> :hand: NOTE : Sentinel **only** accepts a $permission argument so you will not be able to pass in a second argument.
+> :hand: NOTE : Entrust only accepts a boolean (true/false) as it second argument.
+
 
 ### Parameters (optional)
 
